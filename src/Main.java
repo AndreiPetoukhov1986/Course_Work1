@@ -46,14 +46,10 @@ public class Main {
 
     public static void findFullNameEmployeeMinSalary() {
         int minSalary = employee[0].getSalary();
+        String fullNameEmployeeMinSalary = null;
         for (int i = 0; i < employee.length; i++) {
             if (minSalary > employee[i].getSalary()) {
                 minSalary = employee[i].getSalary();
-            }
-        }
-        String fullNameEmployeeMinSalary = null;
-        for (int i = 0; i < employee.length; i++) {
-            if (minSalary == employee[i].getSalary()) {
                 fullNameEmployeeMinSalary = employee[i].getFullName();
             }
         }
@@ -62,15 +58,11 @@ public class Main {
 
     public static void findFullNameEmployeeMaxSalary() {
         int maxSalary = employee[0].getSalary();
+        String fullNameEmployeeMaxSalary = null;
         for (int a = 0; a < employee.length; a++) {
             if (maxSalary < employee[a].getSalary()) {
                 maxSalary = employee[a].getSalary();
-            }
-        }
-        String fullNameEmployeeMaxSalary = null;
-        for (int c = 0; c < employee.length; c++) {
-            if (maxSalary == employee[c].getSalary()) {
-                fullNameEmployeeMaxSalary = employee[c].getFullName();
+                fullNameEmployeeMaxSalary = employee[a].getFullName();
             }
         }
         System.out.println("ФИО сотрудника с максимальной зарплатой - " + fullNameEmployeeMaxSalary);
